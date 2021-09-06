@@ -1,0 +1,379 @@
+/* ------ RESET ------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* ------ Universal Selector ------ */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* ------ General Styles ------ */
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    background-color: #FBFFFB;
+    color: #4f4f4f;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    color: #266035;
+}
+
+button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    padding: 3% 5%;
+    margin-top: 5%;
+}
+
+h1, h2, h3 {
+    font-family: 'Oxygen', sans-serif;
+    color: #266035;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #FBFFFB;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+section, footer {
+    padding: 4% 0;
+}
+
+/* ------ Helper Class ------ */
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ------ Header Section Styles ------ */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    padding: 1% 0;
+}
+
+.logo {
+    width: 5%;
+}
+
+.links {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ------ Home Section Styles ------ */
+
+#home {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/header.jpg');
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#home button {
+    color: #266035;
+    border: 2px solid #266035;
+}
+
+/* ------ About Section Styles ------ */
+
+#about {
+    background-image: url('../images/about-img.jpg');
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#about div {
+    width: 22%;
+    margin-right: 10%;
+}
+
+/* ------ Shop Section Styles ------ */
+
+#shop {
+    padding-bottom: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text, .succulants, .tropicals, .cacti {
+    width: 50%;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6%;
+    text-align: center;
+}
+
+.text div {
+    width: 50%;
+}
+
+.text button {
+    background-color: #266035;
+    color: white;
+}
+
+.succulants {
+    background-image: url('../images/succulants.jpg');
+    background-position: bottom;
+}
+
+.cacti {
+    background-image: url('../images/cacti.jpg');
+    background-position: bottom;
+}
+
+.tropicals {
+    background-image: url('../images/tropicals.jpg');
+    background-position: center;
+}
+
+/* ------ Footer Section Styles ------ */
+
+footer {
+    background-color: #266035;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+footer h2 {
+    color: white;
+    width: 100%;
+}
+
+.left, .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    width: 50%;
+}
+
+.left div {
+    line-height: 3;
+    width: 50%;
+}
+
+footer h3 {
+    color: white;
+    text-align: left;
+}
+
+footer a {
+    color: white;
+}
+
+.copyright {
+    width: 100%;
+    text-align: right;
+}
+
+.copyright p {
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+/* ------ Responsive Design ------ */
+/*
+TWO things needed in order to make a website responsive
+
+1. Viewport meta tag in the head of HTML
+"<meta name="viewport" content="width=device-width, initial-scale=1.0">"
+
+2. Media queries - Rule written that apply to specific screen sizes.
+
+Desktop --> smaller screens === max-width
+Mobile --> larger screen === min-width
+*/
+
+/* ------ Media Queries ------ */
+
+/* Tablet */
+@media(max-width:800px) {
+/*when screen size reaches 800px OR SMALLER, apply these styles */
+    #about {
+        height: 90vh;
+        background-position: right;
+    }
+   
+    #about div {
+       width: 35%;
+       margin-right: 5%;
+   }
+   
+   .text div {
+        width: 65%;
+   }
+}
+
+/* Phone */
+@media(max-width:500px) {
+/*when screen size reaches 500px OR SMALLER, apply these styles */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 10%;
+    }
+
+    .links {
+        width: 90%;
+    }
+
+    #about {
+        background-image: none;
+        background-color: #dddee0;
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #about div {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .text, .succulants, .tropicals, .cacti {
+        width: 90%;
+    }
+
+    .succulants, .tropicals, .cacti {
+        height: 40vh;
+    }
+
+    .one {
+        order: 1;
+    }
+
+    .two {
+        order: 2;
+    }
+
+    .three {
+        order: 3;
+    }
+
+    .four {
+        order: 4;
+    }
+
+    .five {
+        order: 5;
+    }
+
+    .six {
+        order: 6;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    .left, .right {
+        width: 90%;
+    }
+
+    .left div {
+        line-height: 2;
+    }
+
+    footer h2 {
+        order: -2;
+    }
+
+    .right {
+        order: -1;
+    }
+
+    .right img {
+        width: 70%;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .copyright p {
+        margin-right: 0;
+    }
+}
